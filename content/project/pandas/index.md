@@ -1,13 +1,14 @@
 ---
-title: Pandas
-date: 2023-10-26
-external_link: https://github.com/pandas-dev/pandas
+title: Emoji Kitchen Diffusion
+date: 2023-07-20
+external_link: https://github.com/daiyixiang666/Emoji-Kitchen
 tags:
-  - Hugo
-  - Wowchemy
-  - Markdown
+  - Diffusion
+  - Inpainting
+  - LoRA
+  - Generative AI
 ---
 
-Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.
+A diffusion-based emoji fusion system inspired by Google’s Emoji Kitchen. Combines inpainting and LoRA techniques to merge emoji pairs while preserving semantic structure. Also supports latent-space interpolation for creative, high-quality blends.
 
 <!--more-->
