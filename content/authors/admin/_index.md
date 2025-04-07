@@ -99,7 +99,13 @@ languages:
 
 
 awards:
-
+  - title: NeurIPS 2024 Publication
+    date: '2024-05-01'
+    awarder: NeurIPS
+    summary: |
+      Paper: "Understanding Generalizability of Diffusion Models Requires Rethinking the Hidden Gaussian Structure"
+      - Investigated inductive bias in diffusion models and their relationship to Gaussian priors and model size.
+      - Proposed early stopping as a generalization technique.
   - title: The Mathematical Contest in Modeling (MCM) Meritorious Winner
     date: '2023-02-01'
     awarder: COMAP
@@ -112,5 +118,4 @@ awards:
 
 ## About Me
 
-Yixiang Dai is a passionate AI researcher and undergraduate student at the University of Michigan, focusing on generative models, especially diffusion and autoregressive methods. His work spans video generation, model interpretability, and efficient training strategies. He has published at NeurIPS and interned at leading companies in generative AI.
-
+Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
