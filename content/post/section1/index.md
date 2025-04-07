@@ -1,14 +1,16 @@
 ---
-title: 👩🏼‍🏫 Teach academic courses
-summary: Embed videos, podcasts, code, LaTeX math, and even test students!
-date: 2023-10-24
-math: true
-authors:
-  - admin
-tags:
-  - Hugo
-  - Hugo Blox Builder
-  - Markdown
-image:
-  caption: 'Embed rich media such as videos and LaTeX math'
+title: 🧠 Reinforcement Learning: Reborn to Become the CEO  
+summary: Let algorithms survive KPI combat and master the essence of RL through workplace simulations!  
+date: 2025-04-07  
+math: true  
+authors:  
+  - Yixiang Dai  
+tags:  
+  - Reinforcement Learning  
+  - Educational  
+  - AI Workplace Simulation  
+image:  
+  caption: 'Use videos, LaTeX, code, and humor to make RL approachable'  
 ---
+
+
