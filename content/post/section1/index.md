@@ -737,18 +737,30 @@ $$
 
 # PPO 具体细节
 $$
-\mathcal{J}_{PPO}(\theta)=\mathbb{E}_{q\sim P(Q),o\sim\pi_{\theta_{add}}(O|q)}\left[\frac{1}{|o|}\sum_{t=1}^{|o|}\min\left(\frac{\pi_{\theta}(o_{t}|q,o_{<t})}{\pi_{\theta_{add}}(o_{t}|q,o_{<t})}A_{t},\mathrm{clip}\left(\frac{\pi_{\theta}(o_{t}|q,o_{<t})}{\pi_{\theta_{add}}(o_{t}|q,o_{<t})},1-\epsilon,1+\epsilon\right)A_{t}\right)\right]
+\mathcal{J}_{\text{PPO}}(\theta) = \mathbb{E}_{t} \left[ 
+\min \left( 
+r_t(\theta) \cdot A_t,\ 
+\text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \cdot A_t 
+\right) 
+\right]
 $$
 
 
-![avatar](/RL/section1/PPO.png)
+
+![avatar](PPO.png)
 
 
 PPO 需要train 一个 Value model 去计算 Advantage 而 GRPO 省去了这个东西。
 $$
 \begin{aligned}
-& \mathcal{J}_{G R P O}(\theta)=\mathbb{E}\left[q \sim P(Q),\left\{o_i\right\}_{i=1}^G \sim \pi_{\theta_{\text {ald }}}(O \mid q)\right] \\
-& \frac{1}{G} \sum_{i=1}^G \frac{1}{\left|o_i\right|} \sum_{t=1}^{\left|o_i\right|}\left\{\min \left[\frac{\pi_\theta\left(o_{i, t} \mid q, o_{i,<t}\right)}{\left.\pi_{\theta_{\text {old }}\left(o_{i, t} \mid q, o_{i,<t}\right)}\right)} \hat{A}_{i, t}, \operatorname{clip}\left(\frac{\pi_\theta\left(o_{i, t} \mid q, o_{i,<t}\right)}{\left.\left.\pi_{\theta_{o l d}\left(o_{i, t} \mid q, o_{i,<t}\right)}, 1-\varepsilon, 1+\varepsilon\right) \hat{A}_{i, t}\right]}\right\} \cdot \beta \mathbb{D}_{K L}\left[\pi_\theta| | \pi_{r e f}\right]\right\}\right.
+\mathcal{J}_{\text{GRPO}}(\theta) = \mathbb{E} \Bigg[ 
+& q \sim P(Q),\ \{o_i\}_{i=1}^G \sim \pi_{\theta_{\text{old}}}(O \mid q) \Bigg] \\
+& \cdot \frac{1}{G} \sum_{i=1}^G \frac{1}{|o_i|} \sum_{t=1}^{|o_i|} 
+\min \Bigg( 
+r_{i,t}(\theta) \cdot \hat{A}_{i,t},\ 
+\text{clip}(r_{i,t}(\theta), 1 - \varepsilon, 1 + \varepsilon) \cdot \hat{A}_{i,t} 
+\Bigg) \\
+& - \beta \cdot \mathbb{D}_{\mathrm{KL}} \left[ \pi_\theta \,\|\, \pi_{\text{ref}} \right]
 \end{aligned}
 $$
 
