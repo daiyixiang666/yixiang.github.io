@@ -38,6 +38,16 @@ work:
       - Built pretraining pipelines for video and image generation models using autoregressive architectures.
       - Developed a training-free multiscale VQVAE method, eliminating instability in original training methods.
       - Processed large-scale multimodal data for training and evaluated performance on generative tasks.
+  - position: Research Intern
+    company_name: The University of Michigan
+    date_start: 2024-09-01
+    date_end: 2024-12-31
+    summary: |2-
+      - Investigated the impact of frequency components in classifier-free guidance during diffusion model generation.
+      - Found that low-frequency guidance dominates in early stages, enhancing semantic structure and object presence; high-frequency guidance refines class- or text-based details in later stages.
+      - Proposed two frequency-based methods to improve FID:
+        1. Extended unconditional branch timesteps to enhance low-frequency structure modeling, reducing FID from 28.03 to 26.36.
+        2. Replaced unconditional attention with conditional attention in specific layers to strengthen high-frequency details.
 skills:
   - name: Technical Skills
     items:
